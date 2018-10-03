@@ -1,0 +1,12 @@
+<p>
+  <button (click)="getWeather()">Get Weather</button>
+</p>
+
+<h3 *ngIf="cityDetails">
+  City: {{cityDetails.cityName}} State: {{cityDetails.state}} Time Zone: {{cityDetails.timeZone}}
+</h3>
+
+<div *ngFor="let forecast of weatherForecasts">
+    <app-weather-forecast [weatherForecast]="forecast"></app-weather-forecast>
+</div>
+
